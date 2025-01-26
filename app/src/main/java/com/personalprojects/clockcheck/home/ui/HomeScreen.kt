@@ -161,7 +161,6 @@ fun HomeScreen(
     if (shouldShowDialog) {
         ResultDialog(
             onDismissRequest = onDismissDialog,
-            onConfirmation = {},
             isCheckSuccess = isTimeWithinRange
         )
     }

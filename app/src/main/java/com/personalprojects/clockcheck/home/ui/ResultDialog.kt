@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -29,7 +30,6 @@ import com.personalprojects.clockcheck.R
 @Composable
 fun ResultDialog(
     onDismissRequest: () -> Unit,
-    onConfirmation: () -> Unit,
     isCheckSuccess: Boolean
 ) {
     Dialog(onDismissRequest = { onDismissRequest() }) {
@@ -48,8 +48,15 @@ fun ResultDialog(
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 AnimatedPreloader(isCheckSuccess = isCheckSuccess)
+                Spacer(modifier = Modifier.height(24.dp))
                 Text(
-                    text = "This is a dialog with buttons and an image.",
+                    text = stringResource(
+                        if (isCheckSuccess) {
+                            R.string.dialog_text_success
+                        } else {
+                            R.string.dialog_text_failure
+                        }
+                    ),
                     modifier = Modifier.padding(8.dp),
                 )
                 Spacer(modifier = Modifier.weight(1f))
@@ -63,13 +70,7 @@ fun ResultDialog(
                         onClick = { onDismissRequest() },
                         modifier = Modifier.padding(4.dp),
                     ) {
-                        Text("Dismiss")
-                    }
-                    TextButton(
-                        onClick = { onConfirmation() },
-                        modifier = Modifier.padding(4.dp),
-                    ) {
-                        Text("Confirm")
+                        Text(stringResource(R.string.dialog_button_close))
                     }
                 }
             }
@@ -82,9 +83,9 @@ fun AnimatedPreloader(modifier: Modifier = Modifier, isCheckSuccess: Boolean) {
     val preloaderLottieComposition by rememberLottieComposition(
         LottieCompositionSpec.RawRes(
             if (isCheckSuccess) {
-                R.raw.animation_success
+                R.raw.animation_checkmark
             } else {
-                R.raw.animation_fail
+                R.raw.animation_crossmark
             }
         )
     )
@@ -95,11 +96,10 @@ fun AnimatedPreloader(modifier: Modifier = Modifier, isCheckSuccess: Boolean) {
         isPlaying = true
     )
 
-
     LottieAnimation(
         composition = preloaderLottieComposition,
         progress = preloaderProgress,
-        modifier = modifier.size(200.dp)
+        modifier = modifier.size(160.dp)
     )
 }
 
@@ -108,7 +108,6 @@ fun AnimatedPreloader(modifier: Modifier = Modifier, isCheckSuccess: Boolean) {
 fun ResultDialogPreview() {
     ResultDialog(
         onDismissRequest = {},
-        onConfirmation = {},
         isCheckSuccess = true
     )
 }

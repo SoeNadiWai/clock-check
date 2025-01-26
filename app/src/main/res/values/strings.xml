@@ -12,4 +12,10 @@
     <string name="error_not_number">数字のみを入力してください</string>
     <string name="error_greater_than_24">24未満を入力してください</string>
     <string name="error_empty_input">データを入力してください</string>
+    <string name="text_result_title">結果一覧</string>
+
+    <!--    result dialog-->
+    <string name="dialog_button_close">閉じる</string>
+    <string name="dialog_text_success">検索時間が指定された範囲内に含まれています。</string>
+    <string name="dialog_text_failure">検索時間が指定された範囲内に含まれていません。</string>
 </resources>

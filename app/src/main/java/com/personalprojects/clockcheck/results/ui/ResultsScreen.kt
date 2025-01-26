@@ -50,7 +50,7 @@ fun ResultsScreen(viewModel: ResultsViewModel = hiltViewModel()) {
             Text(
                 modifier = Modifier.padding(16.dp),
                 textAlign = TextAlign.Center,
-                text = "結果一覧",
+                text = stringResource(R.string.text_result_title),
                 style = MaterialTheme.typography.headlineLarge
             )
 
@@ -170,7 +170,8 @@ fun IconTableCell(
 }
 
 @Preview(showBackground = true)
-@Composable@Preview
+@Composable
+@Preview
 fun ResultsScreenPreview() {
     ClockCheckTheme {
         ResultsScreen()
