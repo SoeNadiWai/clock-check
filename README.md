@@ -20,15 +20,15 @@
 ## Screenshots
 
 <div style="display: flex;">
-<img src="https://github.com/user-attachments/assets/ddbdf9d4-07ac-4a12-bc50-dc5a4f8f7da8" alt="HomeScreen" style="width: 19%;"/>
+<img src="https://github.com/user-attachments/assets/ddbdf9d4-07ac-4a12-bc50-dc5a4f8f7da8" alt="HomeScreen" style="width: 18%;"/>
 &nbsp; 
-<img src="https://github.com/user-attachments/assets/ce21be11-2577-4f53-8849-ce6d0aeb1675" alt="Validation" style="width: 19%;"/>
+<img src="https://github.com/user-attachments/assets/ce21be11-2577-4f53-8849-ce6d0aeb1675" alt="Validation" style="width: 18%;"/>
 &nbsp; 
-<img src="https://github.com/user-attachments/assets/0d4e2de4-38e0-4cf0-8aa0-a282d25df4ec" alt="Results Screen" style="width: 19%;"/>
+<img src="https://github.com/user-attachments/assets/0d4e2de4-38e0-4cf0-8aa0-a282d25df4ec" alt="Results Screen" style="width: 18%;"/>
 &nbsp; 
-<img src="https://github.com/user-attachments/assets/1298e2c6-185f-491b-b7d2-ae3e162b758e" alt="Success Dialog" style="width: 19%;"/>
+<img src="https://github.com/user-attachments/assets/1298e2c6-185f-491b-b7d2-ae3e162b758e" alt="Success Dialog" style="width: 18%;"/>
 &nbsp; 
-<img src="https://github.com/user-attachments/assets/3ab342f2-a723-4491-ad4a-f7a24d8d7655" alt="Error Dialog" style="width: 19%;"/>
+<img src="https://github.com/user-attachments/assets/3ab342f2-a723-4491-ad4a-f7a24d8d7655" alt="Error Dialog" style="width: 18%;"/>
 </div>
 
 ## Installation
