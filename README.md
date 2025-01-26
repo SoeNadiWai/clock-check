@@ -31,6 +31,12 @@
 <img src="https://github.com/user-attachments/assets/3ab342f2-a723-4491-ad4a-f7a24d8d7655" alt="Error Dialog" style="width: 18%;"/>
 </div>
 
+## Language and Framework
+- Kotlin
+- Jetpack Compose
+- RoomDatabase
+- MVVM
+
 ## Installation
 
 Step-by-step guide on how to install and set up the project.
