@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ClockCheck</string>
+    <string name="text_check_title">Check Time</string>
+    <string name="text_search_time">ある時刻</string>
+    <string name="text_start_time">開始時刻</string>
+    <string name="text_end_time">終了時刻</string>
+    <string name="text_result">結果</string>
+    <string name="text_input_hint">0時</string>
+    <string name="text_check_button">Check</string>
+    <string name="text_warning">＊24時間形式で時間を入力してください（例：午後3時は「15」と入力してください）。</string>
+    <string name="error_over_limit">入力が制限を超えています</string>
+    <string name="error_not_number">数字のみを入力してください</string>
+    <string name="error_greater_than_24">24未満を入力してください</string>
+    <string name="error_empty_input">データを入力してください</string>
+</resources>
