@@ -1,6 +1,7 @@
 package com.personalprojects.clockcheck.results.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
@@ -48,16 +50,16 @@ fun ResultsScreen(viewModel: ResultsViewModel = hiltViewModel()) {
                 .fillMaxSize()
         ) {
             Text(
-                modifier = Modifier.padding(16.dp),
+                modifier = Modifier.padding(vertical = 16.dp, horizontal = 4.dp),
                 textAlign = TextAlign.Center,
                 text = stringResource(R.string.text_result_title),
                 style = MaterialTheme.typography.headlineLarge
             )
-
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(16.dp),
+                    .padding(vertical = 16.dp, horizontal = 4.dp)
+                    .horizontalScroll(rememberScrollState()), // Enable horizontal scrolling
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 item {
@@ -77,7 +79,7 @@ fun TableHeader() {
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.primary)
-            .padding(8.dp)
+            .padding(vertical = 8.dp, horizontal = 4.dp)
     ) {
         TableCell(
             stringResource(R.string.text_search_time),
@@ -110,7 +112,7 @@ fun TableHeader() {
 fun TableCell(
     text: String,
     modifier: Modifier,
-    textColor: Color = Color.Black,
+    textColor: Color = MaterialTheme.colorScheme.onBackground,
     fontWeight: FontWeight = FontWeight.Normal
 ) {
     Box(
